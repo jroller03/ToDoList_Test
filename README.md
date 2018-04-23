@@ -1,18 +1,18 @@
-# Leap Year Solution Testing
+# To Do List with Testing
 
-#### A program that allows users to input a year and see if it a leap year using testing. 4/23/18
+#### A program that allows users to input items and catgories to organize and complete there to do list. 4/23/18
 
 #### By **Justin Roller**
 
 ## Description
 
-A website created with C# and HTML where a user can submit a year and see whether it is a leap year or not.
+A website created with C# and HTML where a user can submit items and a categories to organize there to do list and get it done.
 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
 | **Homepage** | User accesses http://localhost:5000| Homepage |
-| **Program needs input of year** | User input: "2000" | Output: "True" |
+| **Program inputs items or categores** | User input: "add new item/category" | Output: "created new category and item" |
 
 
 
@@ -22,7 +22,7 @@ A website created with C# and HTML where a user can submit a year and see whethe
 2. Clone this repository.
 3. run dotnet run in command box.
 4. go to browser and go to localhost:5000.
-5. Explore my leap year program.
+5. Explore my To Do List program.
 
 ## Known Bugs
 * No known bugs at this time.

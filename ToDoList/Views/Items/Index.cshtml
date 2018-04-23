@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+<h1>To Do List</h1>
+ <ul>
+  @foreach (var item in Model)
+  {
+   <li><a href='/categories/{id}'>@item.GetDescription()</a></li>
+  }
+</ul>
+<a href='/categories/new'>Add new category and item</a>
+<form action="/items/delete" method="post">
+  <button type="submit" name="button">Clear All Items</button>
+</form>
