@@ -7,11 +7,25 @@ using System.Collections.Generic;
 namespace ToDoListApp.Tests
 {
   [TestClass]
-  public class ItemTest : IDisposable
+  public class ItemTests : IDisposable
   {
       public void Dispose()
     {
-      Item.ClearAll();
+      // Item.DeleteAll();
+    }
+    public ItemTests()
+    {
+      DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=todo_test;";
+    }
+    [TestMethod]
+    public void GetAll_DbStartsEmpty_0()
+    {
+      //Arrange
+      //Act
+      int result = Item.GetAll().Count;
+
+      //Assert
+      Assert.AreEqual(0, result);
     }
     [TestMethod]
     public void GetDescription_ReturnsDescription_String()
@@ -27,6 +41,6 @@ namespace ToDoListApp.Tests
       //Assert
       Assert.AreEqual(description, result);
 
-    }    
+    }
   }
 }
