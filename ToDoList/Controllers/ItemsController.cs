@@ -53,7 +53,7 @@ namespace ToDoListApp.Controllers
         [HttpPost("/items/delete")]
         public ActionResult DeleteAll()
         {
-            Item.ClearAll();
+            // Item.ClearAll();
             return View();
         }
 

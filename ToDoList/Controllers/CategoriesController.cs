@@ -41,24 +41,24 @@ namespace ToDoListApp.Controllers
         }
 
 
-        [HttpPost("/items")]
-        public ActionResult CreateItem()
-        {
-          Dictionary<string, object> model = new Dictionary<string, object>();
-          Category foundCategory = Category.Find(Int32.Parse(Request.Form["category-id"]));
-          string itemDescription = Request.Form["item-description"];
-          Item newItem = new Item(itemDescription);
-          foundCategory.AddItem(newItem);
-          List<Item> categoryItems = foundCategory.GetItems();
-          model.Add("items", categoryItems);
-          model.Add("category", foundCategory);
-          return View("Details", model);
-        }
-        [HttpPost("/categories/delete")]
-        public ActionResult DeleteAll()
-        {
-            Category.ClearAll();
-            return View();
-        }
+        // [HttpPost("/items")]
+        // public ActionResult CreateItem()
+        // {
+        //   Dictionary<string, object> model = new Dictionary<string, object>();
+        //   Category foundCategory = Category.Find(Int32.Parse(Request.Form["category-id"]));
+        //   string itemDescription = Request.Form["item-description"];
+        //   Item newItem = new Item(itemDescription);
+        //   foundCategory.AddItem(newItem);
+        //   List<Item> categoryItems = foundCategory.GetItems();
+        //   model.Add("items", categoryItems);
+        //   model.Add("category", foundCategory);
+        //   return View("Details", model);
+        // }
+        // [HttpPost("/categories/delete")]
+        // public ActionResult DeleteAll()
+        // {
+        //     Category.ClearAll();
+        //     return View();
+        // }
     }
 }
